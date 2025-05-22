@@ -49,8 +49,47 @@
     list-style-type: none;
     padding: 0 24px 0 16px;
     margin: 0;
-    width: 240px;
   }
+
+  .brands__container{
+    display: flex !important;
+    height: 72px !important;
+    width: 240px !important;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    background-color: white;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+    .brands__img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #FF3E79;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-right: 16px;
+}
+
+    .brands__arrow{
+    display: inline-block;
+    border-right: 2px solid #FF3E79;
+    border-top: 2px solid #FF3E79;
+    transform: rotate(45deg);
+    height: 8px;
+    width: 8px;
+    margin-right: 2px;
+}
+
+    .brands__link{
+    display: inline-block;
+    height: auto;
+    margin: 0 0 0 16px;
+    line-height: 0;
+    padding: 0;
+}
 
   .swiper-pagination-bullet{
     background-color: #DDDDDD !important;
@@ -81,12 +120,52 @@
         list-style-type: none;
         grid-template-columns: repeat(3, auto);
         justify-content: space-evenly;
-        height: 170px;
+        height: 165px;
         margin: 0;
         padding: 0 24px 0 16px;
         row-gap: 12px;
         column-gap: 16px;
         overflow: hidden;
+    }
+
+    .brands__item{
+        display: flex;
+        height: 72px;
+        width: 240px;
+        border: 1px solid #EAEAEA;
+        border-radius: 6px;
+        background-color: white;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .brands__img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #FF3E79;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        margin-right: 16px;
+    }
+
+    .brands__arrow{
+        display: inline-block;
+        border-right: 2px solid #FF3E79;
+        border-top: 2px solid #FF3E79;
+        transform: rotate(45deg);
+        height: 8px;
+        width: 8px;
+        margin-right: 2px;
+    }
+
+    .brands__link{
+        display: inline-block;
+        height: auto;
+        margin-left: 0 0 0 16px;
+        line-height: 0;
+        padding: 0;
     }
 
     .brands__list--show{
@@ -106,9 +185,19 @@
         padding-bottom: 20px;
         padding-top: 20px;
         cursor: pointer;
+        padding-left: 16px;
       }
 
-      .button--show{
+      .button {
+        background: none;
+        border: none;
+        font-family: 'TT Lakes';
+        font-size: 16px;
+      }
+
+      .button--show::before {
+        content: '';
+        display: inline-block;
         background-image: url(next.svg);
         background-color: #F8F8F8;
         background-repeat: no-repeat;
@@ -118,43 +207,28 @@
         height: 11px;
         border: none;
         padding: 0;
-        margin-left: 24px;
-        margin-right: 0;
+        margin-left: 0;
+        margin-right: 10px;
         cursor: pointer;
       }
 
-       .next--show::after{
-        content:'Показать всё';
-        display: flex;
-        width: 150px;
-        padding-left: 15px;
-        font-family: 'TT Lakes';
-        font-size: 16px;
-      } 
-
-      .button--hide{
+      .button--hide::before {
+        content: '';
+        display: inline-block;
         background-image: url(next.svg);
         background-color: #F8F8F8;
-        background-size: no-repeat;
+        background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         width: 8px;
         height: 11px;
         border: none;
         padding: 0;
-        margin-left: 24px;
-        margin-right: 0;
+        margin-left: 0;
+        margin-right: 10px;
+        cursor: pointer;
         transform:rotate(180deg);
       }
-
-      .next--hide::after{
-        content:'Скрыть';
-        display: flex;
-        width: 150px;
-        padding-left: 15px;
-        font-family: 'TT Lakes';
-        font-size: 16px;
-      } 
   }
 
   @media (min-width: 1120px){
@@ -178,7 +252,7 @@
     }
 
     .next{
-        padding-left: 10px;
+        padding-left: 30px;
     }
 
 
